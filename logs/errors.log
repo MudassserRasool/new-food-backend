@@ -611,3 +611,24 @@
     at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
     at resetPassword (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:229:24)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 23:25:13 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: Invalid credentials please try again, 
+                Stack: Error: Invalid credentials please try again
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.BadRequest (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:8:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:20:22)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-17 23:25:32 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User is not verified please verify your email, 
+                Stack: Error: User is not verified please verify your email
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Forbidden (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:16:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:16:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)

@@ -56,7 +56,7 @@ const registerUser = async (req, res, next) => {
         ExceptionHandler.Forbidden(messages.NOT_VERIFIED_USER);
       }
     }
-    const OTP = otp;
+    const OTP = Math.floor(1000 + Math.random() * 9000);
     await emailService.sendEmail(email, OTP);
     // await twilioService.sendSmsOtp(phone, OTP);
 
