@@ -1,0 +1,751 @@
+2024-12-11 00:50:58 [info]: GET / 200 30 - 3.585 s
+2024-12-11 00:50:59 [info]: GET /favicon.ico 404 150 - 3.204 s
+2024-12-11 23:20:21 [info]: POST /api/users/register 404 158 - 2.800 s
+2024-12-11 23:26:54 [info]: POST /api/users/register 503 54 - 5005.206 s
+2024-12-11 23:26:55 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/users/register,
+           Status: 201,
+             Message: Cannot set headers after they are sent to the client, 
+                Stack: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:659:11)
+    at ServerResponse.header (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/response.js:794:10)
+    at ServerResponse.send (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/response.js:174:12)
+    at ServerResponse.json (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/response.js:278:15)
+    at registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:64:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-11 23:28:35 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/users/register,
+           Status: 500,
+             Message: User is not verified please verify your email, 
+                Stack: Error: User is not verified please verify your email
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Forbidden (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:16:29)
+    at registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:50:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-11 23:28:35 [info]: POST /api/users/register 403 603 - 2776.799 s
+2024-12-11 23:30:09 [info]: POST /api/users/verifySignupOtp 200 341 - 570.362 s
+2024-12-11 23:30:39 [info]: POST /api/users/login 200 290 - 496.007 s
+2024-12-12 23:45:03 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/users/register,
+           Status: 500,
+             Message: Invalid 'To' Phone Number: 0310407XXXX, 
+                Stack: Error: Invalid 'To' Phone Number: 0310407XXXX
+    at Object.sendSmsOtp (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/twilioService.js:17:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:65:5)
+2024-12-12 23:45:03 [info]: POST /api/users/register 500 477 - 4012.754 s
+2024-12-12 23:45:52 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/users/register,
+           Status: 500,
+             Message: Invalid From Number (caller ID): 03010773586, 
+                Stack: Error: Invalid From Number (caller ID): 03010773586
+    at Object.sendSmsOtp (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/twilioService.js:17:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:65:5)
+2024-12-12 23:45:52 [info]: POST /api/users/register 500 489 - 4434.254 s
+2024-12-12 23:46:29 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/users/register,
+           Status: 500,
+             Message: 'From' +923010773586 is not a Twilio phone number or Short Code country mismatch, 
+                Stack: Error: 'From' +923010773586 is not a Twilio phone number or Short Code country mismatch
+    at Object.sendSmsOtp (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/twilioService.js:17:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:65:5)
+2024-12-12 23:46:29 [info]: POST /api/users/register 500 561 - 4258.573 s
+2024-12-13 00:06:43 [info]: GET / 200 30 - 2.788 s
+2024-12-13 00:06:44 [info]: GET /favicon.ico 404 150 - 1.525 s
+2024-12-13 00:06:52 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/users/register,
+           Status: 500,
+             Message: The 'From' phone number provided (+923010773586) is not a valid message-capable Twilio phone number for this destination, 
+                Stack: Error: The 'From' phone number provided (+923010773586) is not a valid message-capable Twilio phone number for this destination
+    at Object.sendSmsOtp (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/twilioService.js:17:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:65:5)
+2024-12-13 00:06:52 [info]: POST /api/users/register 500 641 - 4105.318 s
+2024-12-15 18:12:19 [info]: POST /user/register 404 153 - 2.066 s
+2024-12-15 18:14:11 [info]: POST /user/register 404 153 - 1.785 s
+2024-12-15 18:14:33 [info]: POST /user/register 404 153 - 2.074 s
+2024-12-15 18:17:31 [info]: GET / 304 - - 4.042 s
+2024-12-15 18:17:32 [info]: GET /favicon.ico 404 150 - 1.072 s
+2024-12-15 18:19:18 [info]: GET /api/v1.0 200 30 - 2.647 s
+2024-12-15 18:19:18 [info]: GET /favicon.ico 404 150 - 2.054 s
+2024-12-15 18:19:42 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: Failed to send OTP, 
+                Stack: Error: Failed to send OTP
+    at Object.sendOtpToPhone (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/firebaseService.js:24:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:65:5)
+2024-12-15 18:19:42 [info]: POST /api/v1.0/user/register 500 443 - 5678.021 s
+2024-12-15 18:39:47 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: Failed to send OTP, 
+                Stack: Error: Failed to send OTP
+    at Object.sendOtpToPhone (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/firebaseService.js:24:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:65:5)
+2024-12-15 18:39:47 [info]: POST /api/v1.0/user/register 500 443 - 5376.357 s
+2024-12-15 18:39:57 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: Failed to send OTP, 
+                Stack: Error: Failed to send OTP
+    at Object.sendOtpToPhone (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/firebaseService.js:24:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:65:5)
+2024-12-15 18:39:57 [info]: POST /api/v1.0/user/register 500 443 - 4450.556 s
+2024-12-15 18:40:27 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: Failed to send OTP, 
+                Stack: Error: Failed to send OTP
+    at Object.sendOtpToPhone (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/firebaseService.js:27:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:65:5)
+2024-12-15 18:40:27 [info]: POST /api/v1.0/user/register 500 443 - 5998.070 s
+2024-12-15 18:43:27 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: Failed to send OTP, 
+                Stack: Error: Failed to send OTP
+    at Object.sendOtpToPhone (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/firebaseService.js:27:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:65:5)
+2024-12-15 18:43:27 [info]: POST /api/v1.0/user/register 500 443 - 5373.336 s
+2024-12-15 18:53:12 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: The 'From' phone number provided (+12184177510) is not a valid message-capable Twilio phone number for this destination, 
+                Stack: Error: The 'From' phone number provided (+12184177510) is not a valid message-capable Twilio phone number for this destination
+    at Object.sendSmsOtp (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/twilioService.js:17:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:65:5)
+2024-12-15 18:53:12 [info]: POST /api/v1.0/user/register 500 639 - 4386.789 s
+2024-12-15 22:45:56 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: accountSid must start with AC, 
+                Stack: Error: accountSid must start with AC
+    at Twilio.setAccountSid (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/twilio@5.4.0/node_modules/twilio/lib/base/BaseTwilio.js:82:23)
+    at new Client (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/twilio@5.4.0/node_modules/twilio/lib/base/BaseTwilio.js:45:18)
+    at new Twilio (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/twilio@5.4.0/node_modules/twilio/lib/rest/Twilio.js:33:9)
+    at TwilioSDK (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/twilio@5.4.0/node_modules/twilio/lib/index.js:43:12)
+    at Object.sendSmsOtp (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/twilioService.js:8:18)
+    at registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:65:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-15 22:45:56 [info]: POST /api/v1.0/user/register 500 1067 - 3214.616 s
+2024-12-15 22:46:41 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: accountSid must start with AC, 
+                Stack: Error: accountSid must start with AC
+    at Twilio.setAccountSid (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/twilio@5.4.0/node_modules/twilio/lib/base/BaseTwilio.js:82:23)
+    at new Client (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/twilio@5.4.0/node_modules/twilio/lib/base/BaseTwilio.js:45:18)
+    at new Twilio (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/twilio@5.4.0/node_modules/twilio/lib/rest/Twilio.js:33:9)
+    at TwilioSDK (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/twilio@5.4.0/node_modules/twilio/lib/index.js:43:12)
+    at Object.sendSmsOtp (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/twilioService.js:8:18)
+    at registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:65:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-15 22:46:41 [info]: POST /api/v1.0/user/register 500 1067 - 2834.556 s
+2024-12-15 22:48:25 [info]: POST /api/v1.0/user/register 201 167 - 3709.370 s
+2024-12-15 22:49:42 [info]: POST /api/v1.0/user/verify-signup-otp 404 171 - 1.256 s
+2024-12-15 22:50:54 [info]: POST /api/v1.0/user/verify-signup-otp 500 134 - 250.368 s
+2024-12-15 22:55:39 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: The number +92310407XXXX is unverified. Trial accounts cannot send messages to unverified numbers; verify +92310407XXXX at twilio.com/user/account/phone-numbers/verified, or purchase a Twilio number to send messages to unverified numbers, 
+                Stack: Error: The number +92310407XXXX is unverified. Trial accounts cannot send messages to unverified numbers; verify +92310407XXXX at twilio.com/user/account/phone-numbers/verified, or purchase a Twilio number to send messages to unverified numbers
+    at Object.sendSmsOtp (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/twilioService.js:17:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:65:5)
+2024-12-15 22:55:39 [info]: POST /api/v1.0/user/register 500 875 - 4015.812 s
+2024-12-15 23:11:10 [info]: POST /api/v1.0/user/login 200 290 - 614.761 s
+2024-12-15 23:19:41 [info]: POST /api/v1.0/user/login 200 305 - 262.257 s
+2024-12-15 23:21:09 [info]: POST /api/v1.0/user/register 200 306 - 4211.649 s
+2024-12-15 23:35:17 [info]: GET /api/v1.0 304 - - 6.642 s
+2024-12-15 23:35:34 [info]: GET / 404 139 - 2.795 s
+2024-12-15 23:35:47 [info]: GET /api/v1.0 200 30 - 2.733 s
+2024-12-15 23:37:50 [info]: POST /api/v1.0/user/register 401 36 - 0.860 s
+2024-12-15 23:38:18 [info]: POST /api/v1.0/user/register 401 36 - 0.897 s
+2024-12-15 23:39:32 [info]: POST /api/v1.0/user/register 401 36 - 0.347 s
+2024-12-15 23:39:35 [info]: POST /api/v1.0/user/register 401 36 - 0.937 s
+2024-12-15 23:40:37 [info]: POST /api/v1.0/user/login 200 305 - 253.693 s
+2024-12-15 23:43:27 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:43:27 [info]: POST /api/v1.0/user/login 404 706 - 68.147 s
+2024-12-15 23:44:35 [info]: POST /api/v1.0/user/login 200 322 - 341.784 s
+2024-12-15 23:49:10 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:49:10 [info]: POST /api/v1.0/user/login 404 706 - 68.524 s
+2024-12-15 23:50:23 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:50:23 [info]: POST /api/v1.0/user/login 404 706 - 65.743 s
+2024-12-15 23:50:30 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:50:30 [info]: POST /api/v1.0/user/login 404 706 - 67.626 s
+2024-12-15 23:51:02 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:51:02 [info]: POST /api/v1.0/user/login 404 706 - 66.195 s
+2024-12-15 23:52:33 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:52:33 [info]: POST /api/v1.0/user/login 404 706 - 67.538 s
+2024-12-15 23:53:17 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:53:17 [info]: POST /api/v1.0/user/login 404 706 - 68.011 s
+2024-12-15 23:53:18 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:53:18 [info]: POST /api/v1.0/user/login 404 706 - 69.193 s
+2024-12-15 23:53:31 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:53:31 [info]: POST /api/v1.0/user/login 404 706 - 77.007 s
+2024-12-15 23:53:44 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:53:44 [info]: POST /api/v1.0/user/login 404 706 - 65.743 s
+2024-12-15 23:54:34 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:54:34 [info]: POST /api/v1.0/user/login 404 706 - 74.324 s
+2024-12-15 23:55:38 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:55:38 [info]: POST /api/v1.0/user/login 404 706 - 67.138 s
+2024-12-15 23:56:12 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:56:12 [info]: POST /api/v1.0/user/login 404 706 - 63.438 s
+2024-12-15 23:56:13 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:56:13 [info]: POST /api/v1.0/user/login 404 706 - 64.523 s
+2024-12-15 23:56:18 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:56:18 [info]: POST /api/v1.0/user/login 404 706 - 66.514 s
+2024-12-15 23:56:42 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:56:42 [info]: POST /api/v1.0/user/login 404 706 - 73.997 s
+2024-12-15 23:57:18 [info]: POST /api/v1.0/user/login 200 322 - 224.621 s
+2024-12-15 23:57:44 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:13:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-15 23:57:44 [info]: POST /api/v1.0/user/login 404 706 - 80.731 s
+2024-12-15 23:58:38 [info]: POST /api/v1.0/user/login 200 322 - 219.427 s
+2024-12-16 00:02:01 [info]: POST /api/v1.0/user/login 200 322 - 219.105 s
+2024-12-16 07:59:22 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: User is not verified please verify your email, 
+                Stack: Error: User is not verified please verify your email
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Forbidden (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:16:29)
+    at registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:56:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-16 07:59:22 [info]: POST /api/v1.0/user/register 403 603 - 488.099 s
+2024-12-16 08:06:00 [info]: POST /api/v1.0/user/register 200 362 - 4437.328 s
+2024-12-16 08:45:54 [info]: POST /api/v1.0/user/login 200 322 - 243.116 s
+2024-12-16 08:46:07 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/verify-signup-otp,
+           Status: 500,
+             Message: E11000 duplicate key error collection: fst-food.profiles index: email_1 dup key: { email: "mudasserasoolr@gmail.com" }, 
+                Stack: MongoServerError: E11000 duplicate key error collection: fst-food.profiles index: email_1 dup key: { email: "mudasserasoolr@gmail.com" }
+    at InsertOneOperation.execute (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/operations/insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async tryOperation (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/operations/execute_operation.js:199:20)
+    at async executeOperation (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/operations/execute_operation.js:69:16)
+    at async Collection.insertOne (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/collection.js:154:16)
+2024-12-16 08:46:07 [info]: POST /api/v1.0/user/verify-signup-otp 500 1157 - 281.186 s
+2024-12-16 08:47:30 [info]: POST /api/v1.0/user/register 200 362 - 4254.489 s
+2024-12-16 08:47:57 [info]: POST /api/v1.0/user/verify-signup-otp 200 333 - 212.714 s
+2024-12-16 08:51:55 [info]: POST /api/v1.0/user/register 200 362 - 3436.373 s
+2024-12-16 08:52:17 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/verify-signup-otp,
+           Status: 500,
+             Message: E11000 duplicate key error collection: fst-food.profiles index: email_1 dup key: { email: "mudasserasool@gmail.com" }, 
+                Stack: MongoServerError: E11000 duplicate key error collection: fst-food.profiles index: email_1 dup key: { email: "mudasserasool@gmail.com" }
+    at InsertOneOperation.execute (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/operations/insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async tryOperation (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/operations/execute_operation.js:199:20)
+    at async executeOperation (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/operations/execute_operation.js:69:16)
+    at async Collection.insertOne (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/collection.js:154:16)
+2024-12-16 08:52:17 [info]: POST /api/v1.0/user/verify-signup-otp 500 1155 - 227.007 s
+2024-12-16 08:52:58 [info]: POST /api/v1.0/user/register 200 362 - 2573.304 s
+2024-12-16 08:55:40 [info]: POST /api/v1.0/user/register 200 1118 - 3423.896 s
+2024-12-16 08:57:11 [info]: POST /api/v1.0/user/register 200 362 - 3267.712 s
+2024-12-16 08:59:07 [info]: POST /api/v1.0/user/register 200 545 - 3893.149 s
+2024-12-16 23:42:37 [info]: GET /favicon.ico 404 150 - 4.359 s
+2024-12-17 00:32:59 [info]: GET / 404 139 - 0.578 s
+2024-12-17 00:34:43 [info]: GET /api/v1.0 200 30 - 10.369 s
+2024-12-17 00:34:44 [info]: GET /favicon.ico 404 150 - 2.873 s
+2024-12-17 00:35:14 [info]: POST /api/v1.0/user/login 200 322 - 262.660 s
+2024-12-17 00:47:33 [info]: GET / 404 139 - 0.452 s
+2024-12-17 00:47:51 [info]: GET /api/v1.0 304 - - 0.556 s
+2024-12-17 01:01:50 [info]: POST /api/v1.0/user/login 200 322 - 221.841 s
+2024-12-17 01:10:27 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: User already exists please login, 
+                Stack: Error: User already exists please login
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Conflict (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:28:29)
+    at registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:54:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 01:10:27 [info]: POST /api/v1.0/user/register 409 576 - 79.680 s
+2024-12-17 01:10:44 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: User is not verified please verify your email, 
+                Stack: Error: User is not verified please verify your email
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Forbidden (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:16:29)
+    at registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:56:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 01:10:44 [info]: POST /api/v1.0/user/register 403 603 - 67.045 s
+2024-12-17 01:14:57 [info]: POST /api/v1.0/user/login 200 322 - 212.966 s
+2024-12-17 01:15:22 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: User already exists please login, 
+                Stack: Error: User already exists please login
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Conflict (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:28:29)
+    at registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:54:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 01:15:22 [info]: POST /api/v1.0/user/register 409 576 - 61.505 s
+2024-12-17 01:15:48 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User is not verified please verify your email, 
+                Stack: Error: User is not verified please verify your email
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Forbidden (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:16:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:16:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-17 01:15:48 [info]: POST /api/v1.0/user/login 403 727 - 64.995 s
+2024-12-17 01:18:17 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/login,
+           Status: 500,
+             Message: User is not verified please verify your email, 
+                Stack: Error: User is not verified please verify your email
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Forbidden (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:16:29)
+    at Object.loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/services/userService.js:16:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loginUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:19:20)
+2024-12-17 01:18:17 [info]: POST /api/v1.0/user/login 403 727 - 81.121 s
+2024-12-17 07:32:00 [info]: POST /api/v1.0/user/register 200 542 - 4188.237 s
+2024-12-17 08:18:30 [info]: POST /api/v1.0/user/register 401 36 - 5.925 s
+2024-12-17 08:18:49 [info]: POST /api/v1.0/user/register 401 36 - 1.187 s
+2024-12-17 08:21:30 [info]: GET / 404 139 - 10.613 s
+2024-12-17 08:21:43 [info]: GET /api/v1.0 304 - - 2.846 s
+2024-12-17 08:21:43 [info]: GET /favicon.ico 404 150 - 0.580 s
+2024-12-17 08:26:05 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: User is not verified please verify your email, 
+                Stack: Error: User is not verified please verify your email
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Forbidden (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:16:29)
+    at registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:56:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 08:26:05 [info]: POST /api/v1.0/user/register 403 603 - 99.963 s
+2024-12-17 08:26:24 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: User is not verified please verify your email, 
+                Stack: Error: User is not verified please verify your email
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Forbidden (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:16:29)
+    at registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:56:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 08:26:24 [info]: POST /api/v1.0/user/register 403 603 - 78.222 s
+2024-12-17 08:26:42 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: User already exists please login, 
+                Stack: Error: User already exists please login
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Conflict (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:28:29)
+    at registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:54:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 08:26:42 [info]: POST /api/v1.0/user/register 409 576 - 102.542 s
+2024-12-17 08:26:46 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: User already exists please login, 
+                Stack: Error: User already exists please login
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Conflict (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:28:29)
+    at registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:54:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 08:26:46 [info]: POST /api/v1.0/user/register 409 576 - 73.848 s
+2024-12-17 08:27:12 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: User already exists please login, 
+                Stack: Error: User already exists please login
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Conflict (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:28:29)
+    at registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:54:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 08:27:12 [info]: POST /api/v1.0/user/register 409 576 - 64.102 s
+2024-12-17 08:28:23 [info]: POST /api/v1.0/user/register 200 544 - 3384.319 s
+2024-12-17 08:32:21 [info]: POST /api/v1.0/user/verify-resend-otp 200 80 - 150.936 s
+2024-12-17 08:34:25 [info]: POST /api/v1.0/user/verify-resend-otp 200 80 - 122.840 s
+2024-12-17 08:35:23 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/register,
+           Status: 500,
+             Message: User is not verified please verify your email, 
+                Stack: Error: User is not verified please verify your email
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Forbidden (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:16:29)
+    at registerUser (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:56:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 08:35:23 [info]: POST /api/v1.0/user/register 403 603 - 63.098 s
+2024-12-17 08:36:24 [info]: POST /api/v1.0/user/register 200 544 - 3506.207 s
+2024-12-17 08:38:45 [info]: POST /api/v1.0/user/register 200 361 - 3161.652 s
+2024-12-17 08:39:00 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/verify-signup-otp,
+           Status: 500,
+             Message: E11000 duplicate key error collection: fst-food.profiles index: email_1 dup key: { email: "mudasserasoolr@gmail.com" }, 
+                Stack: MongoServerError: E11000 duplicate key error collection: fst-food.profiles index: email_1 dup key: { email: "mudasserasoolr@gmail.com" }
+    at InsertOneOperation.execute (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/operations/insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async tryOperation (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/operations/execute_operation.js:199:20)
+    at async executeOperation (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/operations/execute_operation.js:69:16)
+    at async Collection.insertOne (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/collection.js:154:16)
+2024-12-17 08:39:00 [info]: POST /api/v1.0/user/verify-signup-otp 500 1157 - 208.517 s
+2024-12-17 08:41:48 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/verify-signup-otp,
+           Status: 500,
+             Message: E11000 duplicate key error collection: fst-food.profiles index: email_1 dup key: { email: "mudasserasoolr@gmail.com" }, 
+                Stack: MongoServerError: E11000 duplicate key error collection: fst-food.profiles index: email_1 dup key: { email: "mudasserasoolr@gmail.com" }
+    at InsertOneOperation.execute (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/operations/insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async tryOperation (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/operations/execute_operation.js:199:20)
+    at async executeOperation (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/operations/execute_operation.js:69:16)
+    at async Collection.insertOne (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/collection.js:154:16)
+2024-12-17 08:41:48 [info]: POST /api/v1.0/user/verify-signup-otp 500 1157 - 595.127 s
+2024-12-17 08:42:45 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/verify-signup-otp,
+           Status: 500,
+             Message: Invalid OTP please try again, 
+                Stack: Error: Invalid OTP please try again
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.BadRequest (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:8:29)
+    at verifyOtp (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:128:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 08:42:45 [info]: POST /api/v1.0/user/verify-signup-otp 400 567 - 62.930 s
+2024-12-17 08:43:07 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/verify-signup-otp,
+           Status: 500,
+             Message: E11000 duplicate key error collection: fst-food.profiles index: email_1 dup key: { email: "mudasserasoolr@gmail.com" }, 
+                Stack: MongoServerError: E11000 duplicate key error collection: fst-food.profiles index: email_1 dup key: { email: "mudasserasoolr@gmail.com" }
+    at InsertOneOperation.execute (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/operations/insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async tryOperation (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/operations/execute_operation.js:199:20)
+    at async executeOperation (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/operations/execute_operation.js:69:16)
+    at async Collection.insertOne (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongodb@6.10.0_socks@2.8.3/node_modules/mongodb/lib/collection.js:154:16)
+2024-12-17 08:43:07 [info]: POST /api/v1.0/user/verify-signup-otp 500 1157 - 200.303 s
+2024-12-17 08:45:18 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/verify-signup-otp,
+           Status: 500,
+             Message: Conflict, 
+                Stack: Error: Conflict
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Conflict (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:28:29)
+    at verifyOtp (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:138:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 08:45:18 [info]: POST /api/v1.0/user/verify-signup-otp 409 526 - 253.839 s
+2024-12-17 08:46:08 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/verify-signup-otp,
+           Status: 500,
+             Message: Profile already exists, 
+                Stack: Error: Profile already exists
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Conflict (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:28:29)
+    at verifyOtp (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:138:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 08:46:08 [info]: POST /api/v1.0/user/verify-signup-otp 409 554 - 224.811 s
+2024-12-17 08:48:54 [info]: POST /api/v1.0/user/verify-signup-otp 200 332 - 149.193 s
+2024-12-17 08:49:10 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/resend-otp,
+           Status: 500,
+             Message: Cast to string failed for value "{ email: 'mudasserasoolr@gmail.com' }" (type Object) at path "email" for model "users", 
+                Stack: CastError: Cast to string failed for value "{ email: 'mudasserasoolr@gmail.com' }" (type Object) at path "email" for model "users"
+    at SchemaString.cast (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongoose@8.8.4_socks@2.8.3/node_modules/mongoose/lib/schema/string.js:606:11)
+    at SchemaType.applySetters (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongoose@8.8.4_socks@2.8.3/node_modules/mongoose/lib/schemaType.js:1236:12)
+    at SchemaString.castForQuery (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongoose@8.8.4_socks@2.8.3/node_modules/mongoose/lib/schema/string.js:692:17)
+    at cast (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongoose@8.8.4_socks@2.8.3/node_modules/mongoose/lib/cast.js:319:34)
+    at Query.cast (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongoose@8.8.4_socks@2.8.3/node_modules/mongoose/lib/query.js:4906:12)
+    at Query._castConditions (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongoose@8.8.4_socks@2.8.3/node_modules/mongoose/lib/query.js:2309:10)
+    at model.Query._findOne (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongoose@8.8.4_socks@2.8.3/node_modules/mongoose/lib/query.js:2632:8)
+    at model.Query.exec (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongoose@8.8.4_socks@2.8.3/node_modules/mongoose/lib/query.js:4458:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async resendOtp (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:167:18)
+2024-12-17 08:49:10 [info]: POST /api/v1.0/user/resend-otp 500 1906 - 5.706 s
+2024-12-17 08:50:28 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/resend-otp,
+           Status: 500,
+             Message: Cast to string failed for value "{ email: 'mudasserasoolr@gmail.com' }" (type Object) at path "email" for model "users", 
+                Stack: CastError: Cast to string failed for value "{ email: 'mudasserasoolr@gmail.com' }" (type Object) at path "email" for model "users"
+    at SchemaString.cast (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongoose@8.8.4_socks@2.8.3/node_modules/mongoose/lib/schema/string.js:606:11)
+    at SchemaType.applySetters (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongoose@8.8.4_socks@2.8.3/node_modules/mongoose/lib/schemaType.js:1236:12)
+    at SchemaString.castForQuery (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongoose@8.8.4_socks@2.8.3/node_modules/mongoose/lib/schema/string.js:692:17)
+    at cast (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongoose@8.8.4_socks@2.8.3/node_modules/mongoose/lib/cast.js:319:34)
+    at Query.cast (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongoose@8.8.4_socks@2.8.3/node_modules/mongoose/lib/query.js:4906:12)
+    at Query._castConditions (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongoose@8.8.4_socks@2.8.3/node_modules/mongoose/lib/query.js:2309:10)
+    at model.Query._findOne (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongoose@8.8.4_socks@2.8.3/node_modules/mongoose/lib/query.js:2632:8)
+    at model.Query.exec (/home/work/Documents/dump/dump/fast-food-app/backend/node_modules/.pnpm/mongoose@8.8.4_socks@2.8.3/node_modules/mongoose/lib/query.js:4458:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async resendOtp (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:168:18)
+2024-12-17 08:50:28 [info]: POST /api/v1.0/user/resend-otp 500 1906 - 16.185 s
+2024-12-17 08:52:24 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/resend-otp,
+           Status: 500,
+             Message: User is already verified please login, 
+                Stack: Error: User is already verified please login
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Forbidden (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:16:29)
+    at resendOtp (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:173:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 08:52:24 [info]: POST /api/v1.0/user/resend-otp 403 585 - 106.301 s
+2024-12-17 08:52:46 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/resend-otp,
+           Status: 500,
+             Message: User is already verified please login, 
+                Stack: Error: User is already verified please login
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.Forbidden (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:16:29)
+    at resendOtp (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:173:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 08:52:46 [info]: POST /api/v1.0/user/resend-otp 403 585 - 112.669 s
+2024-12-17 08:53:46 [info]: POST /api/v1.0/user/resend-otp 200 81 - 3143.222 s
+2024-12-17 08:54:26 [info]: POST /api/v1.0/user/resend-otp 200 83 - 3118.752 s
+2024-12-17 08:54:36 [info]: POST /api/v1.0/user/verify-signup-otp 200 332 - 136.571 s
+2024-12-17 08:58:01 [info]: POST /api/v1.0/user/resend-otp 200 83 - 3996.116 s
+2024-12-17 08:58:16 [info]: POST /api/v1.0/user/verify-signup-otp 200 494 - 129.488 s
+2024-12-17 08:59:43 [info]: POST /api/v1.0/user/register 200 361 - 4178.482 s
+2024-12-17 08:59:53 [info]: POST /api/v1.0/user/verify-signup-otp 200 500 - 134.314 s
+2024-12-17 09:00:04 [info]: POST /api/v1.0/user/resend-otp 200 83 - 2541.737 s
+2024-12-17 09:00:16 [info]: POST /api/v1.0/user/verify-signup-otp 200 500 - 159.763 s
+2024-12-17 09:06:47 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/resend-otp,
+           Status: 500,
+             Message: User is not registered please register first, 
+                Stack: Error: User is not registered please register first
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at resendOtp (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:163:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 09:06:47 [info]: POST /api/v1.0/user/resend-otp 404 598 - 66.047 s
+2024-12-17 09:10:02 [info]: POST /api/v1.0/user/resend-otp 200 83 - 3919.599 s
+2024-12-17 09:10:15 [info]: POST /api/v1.0/user/verify-resend-otp 200 80 - 223.845 s
+2024-12-17 09:10:37 [error]: Error occurred - 
+      Method: POST,
+         URL: /api/v1.0/user/reset-password,
+           Status: 500,
+             Message: User does not found please register, 
+                Stack: Error: User does not found please register
+    at ExceptionHandler._throw (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:49:11)
+    at ExceptionHandler.NotFound (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/utils/error.js:20:29)
+    at resetPassword (file:///home/work/Documents/dump/dump/fast-food-app/backend/src/controllers/userController.js:229:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-12-17 09:10:37 [info]: POST /api/v1.0/user/reset-password 404 584 - 67.637 s
+2024-12-17 09:12:27 [info]: POST /api/v1.0/user/reset-password 201 87 - 286.871 s
+2024-12-17 09:12:51 [info]: POST /api/v1.0/user/resend-otp 200 83 - 3940.831 s
+2024-12-17 09:13:05 [info]: POST /api/v1.0/user/verify-resend-otp 200 80 - 131.185 s
+2024-12-17 09:13:25 [info]: POST /api/v1.0/user/reset-password 201 87 - 223.148 s
+2024-12-17 09:13:45 [info]: POST /api/v1.0/user/login 200 322 - 260.390 s
+2024-12-17 09:14:06 [info]: POST /api/v1.0/user/resend-otp 200 83 - 4314.733 s
+2024-12-17 09:14:21 [info]: POST /api/v1.0/user/verify-resend-otp 200 80 - 128.089 s
