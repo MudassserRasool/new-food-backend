@@ -10,7 +10,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "pm2 start src/index.mjs --watch",
+    "start": "node src/index.mjs",
     "debug": "node --inspect src/index.js",
     "dev": "concurrently \"node --watch --no-warnings src/index.mjs\" "
   },
