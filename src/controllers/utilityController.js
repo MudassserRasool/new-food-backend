@@ -1,4 +1,4 @@
-import { BACKEND_BASE_URL } from '../constants/environment.js';
+import { BACKEND_BASE_URL } from '../constants/index.js';
 
 class UtilityController {
   async uploadImage(req, res) {

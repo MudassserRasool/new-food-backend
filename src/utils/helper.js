@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 import nodemailer from 'nodemailer';
-import os from 'os';
+// import os from 'os';
 import path from 'path';
 import winston from 'winston';
 import { tokenExpirationDuration } from '../constants/index.js';
@@ -26,23 +26,23 @@ const generateToken = (_id) => {
   });
 };
 
-const ipAddress = () => {
-  const networkInterfaces = os.networkInterfaces();
-  let ipAddress;
+// const ipAddress = () => {
+//   const networkInterfaces = os.networkInterfaces();
+//   let ipAddress;
 
-  for (const interfaceName in networkInterfaces) {
-    const networks = networkInterfaces[interfaceName];
+//   for (const interfaceName in networkInterfaces) {
+//     const networks = networkInterfaces[interfaceName];
 
-    for (const network of networks) {
-      if (network.family === 'IPv4' && !network.internal) {
-        ipAddress = network.address;
-        break;
-      }
-    }
-    if (ipAddress) break;
-  }
-  return ipAddress;
-};
+//     for (const network of networks) {
+//       if (network.family === 'IPv4' && !network.internal) {
+//         ipAddress = network.address;
+//         break;
+//       }
+//     }
+//     if (ipAddress) break;
+//   }
+//   return ipAddress;
+// };
 
 // Create Winston logger
 const logger = winston.createLogger({
@@ -65,4 +65,4 @@ const logger = winston.createLogger({
     }),
   ],
 });
-export { generateToken, ipAddress, logger };
+export { generateToken, logger };

@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { ipAddress } from '../utils/helper.js';
+import { ipAddress } from '../constants/index.js';
 
 const connectDb = async (port) => {
   try {
