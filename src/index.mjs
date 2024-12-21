@@ -15,6 +15,7 @@ import rateLimiter from './middlewares/ratelimter.js';
 import timeout from './middlewares/timeout.js';
 import uploadMiddleware from './middlewares/uploadMiddleware.js';
 import categoryRouter from './routes/categoryRoute.js';
+import productRouter from './routes/productRoute.js';
 import profileRouter from './routes/profile.js';
 import userRouter from './routes/user.js';
 import orderSocket from './socket/orderSocket.js';
@@ -22,7 +23,6 @@ const app = express();
 // Attach socket.io to the server
 const { io, server } = initializeSocketIo(app);
 
-app.use('/uploads', express.static('uploads'));
 app.use(express.json());
 app.use(cors());
 app.use(rateLimiter);
@@ -39,6 +39,7 @@ app.get(`/api/${apiVersion}/`, async (req, res) => {
 app.use(`/api/${apiVersion}/user`, userRouter);
 app.use(`/api/${apiVersion}/profile`, profileRouter);
 app.use(`/api/${apiVersion}/category`, categoryRouter);
+app.use(`/api/${apiVersion}/product`, productRouter);
 
 app.post(
   `/api/${apiVersion}/upload`,

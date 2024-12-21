@@ -1,10 +1,11 @@
 import categoryModel from '../models/categoryModel.js';
+import ExceptionHandler from '../utils/error.js';
 import successResponse from '../utils/successResponse.js';
 
 class CategoryController {
   async createCategory(req, res, next) {
     try {
-      const { name } = req.body;
+      const { name, icon } = req.body;
       const category = await categoryModel.create({ name, icon });
       successResponse(res, 'Category created successfully', category);
     } catch (error) {
@@ -34,9 +35,12 @@ class CategoryController {
   async updateCategory(req, res, next) {
     const { id } = req.params;
     try {
+      const existCategory = await categoryModel.findById(id);
+      if (!existCategory) {
+        ExceptionHandler.NotFound('Category not found');
+      }
       const category = await categoryModel.findByIdAndUpdate(id, req.body, {
         new: true,
-        runValidators: true,
       });
       successResponse(res, 'Category updated successfully', category);
     } catch (error) {

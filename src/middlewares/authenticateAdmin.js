@@ -1,3 +1,5 @@
+import ExceptionHandler from '../utils/error.js';
+
 const authenticateAdmin = (req, res, next) => {
   const token = req.headers.authorization?.split(' ')[1];
 
@@ -19,7 +21,7 @@ const authenticateAdmin = (req, res, next) => {
     req.user = decoded;
     next();
   } catch (err) {
-    res.status(400).json({ message: 'Invalid token.' });
+    ExceptionHandler.Forbidden('Invalid token');
   }
 };
 

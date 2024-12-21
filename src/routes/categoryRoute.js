@@ -1,14 +1,16 @@
 import { Router } from 'express';
 import categoryController from '../controllers/categoryController.js';
-import authenticateAdmin from '../middlewares/authenticateAdmin.js';
-import upload from '../middlewares/multer.js';
+import requireAuth from '../middlewares/requireAuth.js';
+// import authenticateAdmin from '../middlewares/authenticateAdmin.js';
 const router = Router();
 
-router.use(authenticateAdmin);
 router.get('/', categoryController.getCategories);
+
+// router.use(authenticateAdmin);
+router.use(requireAuth);
 router.get('/:id', categoryController.getCategory);
-router.post('/', upload.single('image'), categoryController.createCategory);
-router.patch('/:id', upload.single('image'), categoryController.updateCategory);
+router.post('/', categoryController.createCategory);
+router.patch('/:id', categoryController.updateCategory);
 router.delete('/:id', categoryController.deleteCategory);
 
 export default router;
