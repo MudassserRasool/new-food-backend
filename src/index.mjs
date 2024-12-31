@@ -32,7 +32,7 @@ const __dirname = path.resolve();
 app.use(express.static(__dirname + '/public'));
 app.use(loggerMiddleware);
 
-app.get(`/api/${apiVersion}/`, async (req, res) => {
+app.get(`/`, async (req, res) => {
   res.send('Hello world, Server is running');
 });
 

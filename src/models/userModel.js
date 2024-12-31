@@ -29,6 +29,6 @@ const userSchema = new Schema({
     default: 'customer',
   },
 });
-userSchema.index({ email: 1 });
+// userSchema.index({ email: 1 });
 
 export default mongoose.model('users', userSchema);
