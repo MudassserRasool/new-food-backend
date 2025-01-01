@@ -1,4 +1,4 @@
-import bcrypt from 'bcrypt'; // vercel is not supporting it so use olde rversion or js-sha512
+import bcrypt from 'bcryptjs'; // vercel is not supporting it so use olde rversion or js-sha512
 import validator from 'validator';
 import { otp, salt } from '../constants/index.js';
 import messages from '../constants/messages.js';
@@ -25,6 +25,7 @@ const loginUser = async (req, res, next) => {
 
 const registerUser = async (req, res, next) => {
   const { email, phone, password, role } = req.body;
+  console.log(first);
   // Check that both email and password are provided
   if (!email || !password | !phone) {
     return res.status(401).send({ message: 'Enter all input fields' });

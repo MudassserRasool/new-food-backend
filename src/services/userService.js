@@ -1,4 +1,4 @@
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import validator from 'validator';
 import { otp, salt } from '../constants/index.js';
 import messages from '../constants/messages.js';

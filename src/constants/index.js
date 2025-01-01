@@ -1,4 +1,4 @@
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import os from 'os';
 // import { ipAddress } from '../utils/helper.js';
 import { PORT } from './environment.js';
