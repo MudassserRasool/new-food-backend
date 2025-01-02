@@ -1,6 +1,7 @@
 import cors from 'cors';
 import 'dotenv/config';
 import express from 'express';
+import helmet from 'helmet';
 import path from 'path';
 import connectDb from './config/db.js';
 import initializeSocketIo from './config/socket.js';
@@ -24,8 +25,14 @@ const app = express();
 const { io, server } = initializeSocketIo(app);
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: '*',
+  })
+);
 app.use(rateLimiter);
+app.use(helmet());
+
 app.use(timeout(50000));
 
 const __dirname = path.resolve();
