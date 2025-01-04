@@ -25,7 +25,6 @@ const loginUser = async (req, res, next) => {
 
 const registerUser = async (req, res, next) => {
   const { email, phone, password, role } = req.body;
-  console.log(first);
   // Check that both email and password are provided
   if (!email || !password | !phone) {
     return res.status(401).send({ message: 'Enter all input fields' });

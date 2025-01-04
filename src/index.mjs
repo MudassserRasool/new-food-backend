@@ -9,27 +9,23 @@ import uploadConfig from './config/uploadConfig.js';
 import { PORT } from './constants/environment.js';
 import { apiVersion } from './constants/index.js';
 import utilityController from './controllers/utilityController.js';
-import errorHandler from './middlewares/errorHandler.js';
+import errorHandler, {
+  notFoundMiddleware,
+} from './middlewares/errorHandler.js';
 import errorLogger from './middlewares/errorLogger.js';
 import { loggerMiddleware } from './middlewares/logger.js';
 import rateLimiter from './middlewares/ratelimter.js';
 import timeout from './middlewares/timeout.js';
 import uploadMiddleware from './middlewares/uploadMiddleware.js';
-import categoryRouter from './routes/categoryRoute.js';
-import productRouter from './routes/productRoute.js';
-import profileRouter from './routes/profile.js';
-import userRouter from './routes/user.js';
+
+import apiRoutes from './constants/apiRoutes.js';
 import orderSocket from './socket/orderSocket.js';
 const app = express();
 // Attach socket.io to the server
 const { io, server } = initializeSocketIo(app);
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: '*',
-  })
-);
+app.use(cors());
 app.use(rateLimiter);
 app.use(helmet());
 
@@ -43,10 +39,9 @@ app.get(`/`, async (req, res) => {
   res.send('Hello world, Server is running');
 });
 
-app.use(`/api/${apiVersion}/user`, userRouter);
-app.use(`/api/${apiVersion}/profile`, profileRouter);
-app.use(`/api/${apiVersion}/category`, categoryRouter);
-app.use(`/api/${apiVersion}/product`, productRouter);
+apiRoutes.forEach(({ baseResource, router, middlewares = [] }) => {
+  app.use(`/api/${apiVersion}/${baseResource}`, ...middlewares, router);
+});
 
 app.post(
   `/api/${apiVersion}/upload`,
@@ -55,6 +50,7 @@ app.post(
   utilityController.uploadImage
 );
 
+app.use(notFoundMiddleware);
 app.use(errorLogger);
 app.use(errorHandler);
 

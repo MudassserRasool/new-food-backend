@@ -11,3 +11,11 @@ const errorHandler = (err, req, res, next) => {
 };
 
 export default errorHandler;
+
+const notFoundMiddleware = (req, res, next) => {
+  res.status(404).json({
+    success: false,
+    message: `The route ${req.originalUrl} does not exist. Please check the API documentation.`,
+  });
+};
+export { notFoundMiddleware };
