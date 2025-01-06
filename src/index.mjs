@@ -7,7 +7,7 @@ import connectDb from './config/db.js';
 import initializeSocketIo from './config/socket.js';
 import uploadConfig from './config/uploadConfig.js';
 import { PORT } from './constants/environment.js';
-import { apiVersion } from './constants/index.js';
+import { apiVersion, requestTimeoutDuration } from './constants/index.js';
 import utilityController from './controllers/utilityController.js';
 import errorHandler, {
   notFoundMiddleware,
@@ -29,7 +29,7 @@ app.use(cors());
 app.use(rateLimiter);
 app.use(helmet());
 
-app.use(timeout(50000));
+app.use(timeout(requestTimeoutDuration));
 
 const __dirname = path.resolve();
 app.use(express.static(__dirname + '/public'));

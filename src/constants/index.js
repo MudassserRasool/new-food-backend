@@ -17,6 +17,7 @@ const trackingId = Math.floor(Math.random() * 1000000000);
 const windowMs = 15 * 60 * 1000;
 const maxRequests = 100;
 const apiVersion = 'v1.0';
+const requestTimeoutDuration = 50000;
 
 const ipAddress = () => {
   const networkInterfaces = os.networkInterfaces();
@@ -47,6 +48,7 @@ export {
   ipAddress,
   maxRequests,
   otp,
+  requestTimeoutDuration,
   salt,
   tokenExpirationDuration,
   trackingId,
