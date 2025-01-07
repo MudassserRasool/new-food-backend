@@ -1,10 +1,12 @@
+import chalk from 'chalk';
 import jwt from 'jsonwebtoken';
 import nodemailer from 'nodemailer';
+
 // import os from 'os';
 import path from 'path';
 import winston from 'winston';
 import { tokenExpirationDuration } from '../constants/index.js';
-export function createTransporter() {
+function createTransporter() {
   return nodemailer.createTransport({
     service: 'gmail',
     host: 'smtp.gmail.com',
@@ -65,4 +67,34 @@ const logger = winston.createLogger({
     }),
   ],
 });
-export { generateToken, logger };
+
+// utils/logger.js
+
+const detailedLog = (title, ...details) => {
+  const timestamp = new Date().toISOString();
+  const separator = '-'.repeat(50);
+
+  console.log(chalk.blueBright(`[${timestamp}]`)); // Timestamp
+  console.log(
+    chalk.greenBright(`---------- ${title.toUpperCase()} ----------`)
+  );
+  details.forEach((detail, index) => {
+    console.log(chalk.yellowBright(`Detail ${index + 1}:`), detail);
+  });
+  console.log(chalk.redBright(separator));
+};
+
+function capitalizeFirstLetter(str) {
+  if (typeof str !== 'string' || str.length === 0) {
+    return str; // return the string unchanged if it's not a string or is empty
+  }
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+export {
+  capitalizeFirstLetter,
+  createTransporter,
+  detailedLog,
+  generateToken,
+  logger,
+};

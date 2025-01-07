@@ -46,7 +46,11 @@ class OrderController {
   async getOrdersAdmin(req, res, next) {
     const { status } = req.query;
     try {
-      const orders = await orderModel.find({ status });
+      const query = {};
+      if (status) {
+        query.status = status;
+      }
+      const orders = await orderModel.find(query);
       successResponse(res, 'Orders fetched successfully', orders);
     } catch (error) {
       next(error);

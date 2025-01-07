@@ -9,6 +9,10 @@ const dealSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please enter the description of the deal'],
   },
+  type: {
+    type: String,
+    default: 'deal',
+  },
   price: {
     type: Number,
     required: [true, 'Please enter the price of the deal'],

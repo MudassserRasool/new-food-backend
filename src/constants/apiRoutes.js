@@ -1,4 +1,5 @@
 import requireAuth from '../middlewares/requireAuth.js';
+import addressRouter from '../routes/addressRoute.js';
 import categoryRouter from '../routes/categoryRoute.js';
 import dealRouter from '../routes/dealRoute.js  ';
 import orderRouter from '../routes/orderRoute.js';
@@ -6,6 +7,7 @@ import productRouter from '../routes/productRoute.js';
 import profileRouter from '../routes/profileRoute.js';
 import reviewRouter from '../routes/reviewRoute.js';
 import userRouter from '../routes/user.js';
+import wishlistRouter from '../routes/wishlistRoute.js';
 const apiRoutes = [
   {
     baseResource: 'user',
@@ -40,6 +42,16 @@ const apiRoutes = [
   {
     baseResource: 'order',
     router: orderRouter,
+    middlewares: [requireAuth],
+  },
+  {
+    baseResource: 'address',
+    router: addressRouter,
+    middlewares: [requireAuth],
+  },
+  {
+    baseResource: 'wishlist',
+    router: wishlistRouter,
     middlewares: [requireAuth],
   },
 ];
