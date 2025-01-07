@@ -12,10 +12,7 @@ const Profile = new Schema({
     type: String,
   },
   gender: { type: String },
-  email: {
-    type: String,
-    unique: true,
-  },
+
   phone: {
     type: String,
   },

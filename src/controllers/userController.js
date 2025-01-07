@@ -138,11 +138,11 @@ const verifyOtp = async (req, res, next) => {
     //   return ExceptionHandler.Conflict('Profile already exists');
     // }
 
-    // await profileModel.create({
-    //   email,
-    //   userId: registeredUser._id,
-    //   password: registeredUser.password,
-    // });
+    await profileModel.create({
+      email,
+      userId: registeredUser._id,
+      password: registeredUser.password,
+    });
 
     successResponse(res, 'Your account is verified', {
       ...registeredUser.toObject(),

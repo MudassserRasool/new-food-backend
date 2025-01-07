@@ -1,7 +1,10 @@
 import requireAuth from '../middlewares/requireAuth.js';
 import categoryRouter from '../routes/categoryRoute.js';
+import dealRouter from '../routes/dealRoute.js  ';
+import orderRouter from '../routes/orderRoute.js';
 import productRouter from '../routes/productRoute.js';
-import profileRouter from '../routes/profile.js';
+import profileRouter from '../routes/profileRoute.js';
+import reviewRouter from '../routes/reviewRoute.js';
 import userRouter from '../routes/user.js';
 const apiRoutes = [
   {
@@ -22,6 +25,21 @@ const apiRoutes = [
   {
     baseResource: 'product',
     router: productRouter,
+    middlewares: [requireAuth],
+  },
+  {
+    baseResource: 'deal',
+    router: dealRouter,
+    middlewares: [requireAuth],
+  },
+  {
+    baseResource: 'review',
+    router: reviewRouter,
+    middlewares: [requireAuth],
+  },
+  {
+    baseResource: 'order',
+    router: orderRouter,
     middlewares: [requireAuth],
   },
 ];

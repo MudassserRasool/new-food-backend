@@ -7,6 +7,6 @@ import upload from '../middlewares/multer.js';
 const router = Router();
 
 router.get('/', getCurrentProfileInfo);
-router.patch('/update-profile', upload.single('image'), updateProfileInfo);
+router.put('/', upload.single('image'), updateProfileInfo);
 
 export default router;
