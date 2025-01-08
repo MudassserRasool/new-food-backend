@@ -19,6 +19,7 @@ import timeout from './middlewares/timeout.js';
 import uploadMiddleware from './middlewares/uploadMiddleware.js';
 
 import apiRoutes from './constants/apiRoutes.js';
+import chatSocket from './socket/chatSocket.js';
 import orderSocket from './socket/orderSocket.js';
 const app = express();
 // Attach socket.io to the server
@@ -55,6 +56,7 @@ app.use(errorLogger);
 app.use(errorHandler);
 
 orderSocket(io);
+chatSocket(io);
 server.listen(PORT, async () => {
   await connectDb(PORT);
 });

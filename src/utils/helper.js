@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken';
 import nodemailer from 'nodemailer';
 
 // import os from 'os';
+import mongoose from 'mongoose';
 import path from 'path';
 import winston from 'winston';
 import { tokenExpirationDuration } from '../constants/index.js';
@@ -76,7 +77,7 @@ const detailedLog = (title, ...details) => {
 
   console.log(chalk.blueBright(`[${timestamp}]`)); // Timestamp
   console.log(
-    chalk.greenBright(`---------- ${title.toUpperCase()} ----------`)
+    chalk.greenBright(`---------- ${capitalizeFirstLetter(title)} ----------`)
   );
   details.forEach((detail, index) => {
     console.log(chalk.yellowBright(`Detail ${index + 1}:`), detail);
@@ -91,8 +92,18 @@ function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+function generateChatId(userId1, userId2) {
+  const chatIds = `${userId1}-${userId2}`.split('-');
+  return chatIds.join('-');
+}
+
+function convertValidMongoId(id) {
+  return mongoose.Types.ObjectId.createFromHexString(id);
+}
+
 export {
   capitalizeFirstLetter,
+  convertValidMongoId,
   createTransporter,
   detailedLog,
   generateToken,
